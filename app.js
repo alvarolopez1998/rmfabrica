@@ -9,7 +9,7 @@ const CONFIG = {
     maxJornadas: 38,
     zonas: { verde: [1], azul: [2, 3, 4, 5], rojo: [16, 17, 18, 19, 20] }
   },
-  real_madrid_c: {
+  rmc: {
     canteraId: "real_madrid_c",
     nombreCantera: "REAL MADRID C",
     tituloCompeticion: "SEGUNDA FEDERACIÓN",
@@ -18,7 +18,7 @@ const CONFIG = {
     maxJornadas: 34,
     zonas: { verde: [1], azul: [2, 3, 4, 5], naranja: [13], rojo: [14, 15, 16, 17, 18] }
   },
-  juvenil_a: {
+  juvenilA: {
     canteraId: "juvenil_a",
     nombreCantera: "JUVENIL A",
     tituloCompeticion: "DIVISIÓN DE HONOR",
@@ -43,8 +43,8 @@ const CONFIG = {
 };
 
 // Credenciales de la base de datos en la nube (JSONBin.io)
-const BIN_ID = 'TU_BIN_ID';
-const API_KEY = 'TU_API_KEY';
+const BIN_ID = '6acbeddfac6210605a28b863';
+const API_KEY = '$2a$10$7vYa8GikHCcgoiO7LXnyTeZQSkXRSJqyGF6swRqNcUFMym20SgVRC';
 
 let todosLosEquipos = {};
 let calendariosJornadas = {};
@@ -190,21 +190,28 @@ function renderizarFormularioPartidos(partidos) {
   partidos.forEach((p, index) => {
     const gLocal = golesGuardados[`${index}_local`] !== undefined ? golesGuardados[`${index}_local`] : 0;
     const gVisitante = golesGuardados[`${index}_vis`] !== undefined ? golesGuardados[`${index}_vis`] : 0;
+    const esSuspendido = golesGuardados[`${index}_suspendido`] ? 'checked' : '';
 
     const div = document.createElement('div');
     div.className = 'partido-fila';
     div.innerHTML = `
-      <div class="equipo-box">
+      <div class="equipo-box local">
         <img src="assets/escudos/${p.local.id}.png" onerror="this.style.opacity='0'">
-        <span>${p.local.nombre}</span>
+        <span class="equipo-nombre">${p.local.nombre}</span>
       </div>
-      <input type="number" class="goles-input" data-index="${index}" data-id="${p.local.id}" value="${gLocal}" min="0" oninput="actualizarClasificacionLocal()">
-      <span>-</span>
-      <input type="number" class="goles-input" data-index="${index}" data-id="${p.visitante.id}" value="${gVisitante}" min="0" oninput="actualizarClasificacionLocal()">
-      <div class="equipo-box" style="justify-content: flex-end;">
-        <span>${p.visitante.nombre}</span>
+      <div class="marcador-box">
+        <input type="number" class="goles-input" data-index="${index}" value="${gLocal}" min="0" oninput="actualizarClasificacionLocal()">
+        <span>-</span>
+        <input type="number" class="goles-input" data-index="${index}" value="${gVisitante}" min="0" oninput="actualizarClasificacionLocal()">
+      </div>
+      <div class="equipo-box vis">
+        <span class="equipo-nombre">${p.visitante.nombre}</span>
         <img src="assets/escudos/${p.visitante.id}.png" onerror="this.style.opacity='0'">
       </div>
+      <label class="suspendido-label" title="Marcar como partido suspendido/aplazado">
+        <input type="checkbox" class="suspendido-checkbox" data-index="${index}" ${esSuspendido} onchange="actualizarClasificacionLocal()">
+        <span>⏸️ Susp.</span>
+      </label>
     `;
     contenedor.appendChild(div);
   });
@@ -216,14 +223,16 @@ window.actualizarClasificacionLocal = function() {
   const numJornada = inputJornada ? inputJornada.value : '1';
   const clave = `${ligaActual}_j${numJornada}`;
   
-  const inputs = document.querySelectorAll('.goles-input');
+  const filas = document.querySelectorAll('.partido-fila');
   const jornadaResultados = {};
 
-  inputs.forEach(input => {
-    const idx = input.dataset.index;
-    const esLocal = input === inputs[parseInt(idx) * 2];
-    const tipoKey = esLocal ? `${idx}_local` : `${idx}_vis`;
-    jornadaResultados[tipoKey] = parseInt(input.value) || 0;
+  filas.forEach((fila, index) => {
+    const inputsGoles = fila.querySelectorAll('.goles-input');
+    const chkSuspendido = fila.querySelector('.suspendido-checkbox');
+    
+    jornadaResultados[`${index}_local`] = parseInt(inputsGoles[0].value) || 0;
+    jornadaResultados[`${index}_vis`] = parseInt(inputsGoles[1].value) || 0;
+    jornadaResultados[`${index}_suspendido`] = chkSuspendido ? chkSuspendido.checked : false;
   });
 
   resultadosGlobales[clave] = jornadaResultados;
@@ -281,8 +290,10 @@ window.actualizarClasificacion = function() {
       partidosJ.forEach((p, index) => {
         const g1 = guardados[`${index}_local`];
         const g2 = guardados[`${index}_vis`];
+        const estaSuspendido = guardados[`${index}_suspendido`];
 
-        if (g1 !== undefined && g2 !== undefined) {
+        // Si está marcado como suspendido, ignoramos el partido por completo
+        if (!estaSuspendido && g1 !== undefined && g2 !== undefined) {
           const eq1 = tablaEquipos.find(e => e.id === p.local);
           const eq2 = tablaEquipos.find(e => e.id === p.visitante);
 
@@ -431,7 +442,7 @@ window.renderizarCanvas = function() {
         let w = imgEscudo.width || targetSize;
         let h = imgEscudo.height || targetSize;
         const ratio = Math.min(targetSize / w, targetSize / h);
-        ctx.drawImage(imgEscudo, 150 - ((w * ratio) / 2), (y + (ALTO_FILA / 2)) - ((h * ratio) / 2), w * ratio, h * ratio);
+        ctx.drawImage(imgEscudo, 160 - ((w * ratio) / 2), (y + (ALTO_FILA / 2)) - ((h * ratio) / 2), w * ratio, h * ratio);
       }
 
       ctx.textAlign = "left";
@@ -475,7 +486,7 @@ window.renderizarCanvas = function() {
         let w = imgEscudo.width || targetSize;
         let h = imgEscudo.height || targetSize;
         const ratio = Math.min(targetSize / w, targetSize / h);
-        ctx.drawImage(imgEscudo, 150 - ((w * ratio) / 2), (y + (ALTO_FILA / 2)) - ((h * ratio) / 2), w * ratio, h * ratio);
+        ctx.drawImage(imgEscudo, 160 - ((w * ratio) / 2), (y + (ALTO_FILA / 2)) - ((h * ratio) / 2), w * ratio, h * ratio);
       }
 
       ctx.textAlign = "left";
