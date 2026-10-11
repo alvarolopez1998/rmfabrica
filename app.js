@@ -9,7 +9,7 @@ const CONFIG = {
     maxJornadas: 38,
     zonas: { verde: [1], azul: [2, 3, 4, 5], rojo: [16, 17, 18, 19, 20] }
   },
-  rmc: {
+  real_madrid_c: {
     canteraId: "real_madrid_c",
     nombreCantera: "REAL MADRID C",
     tituloCompeticion: "SEGUNDA FEDERACIÓN",
@@ -18,7 +18,7 @@ const CONFIG = {
     maxJornadas: 34,
     zonas: { verde: [1], azul: [2, 3, 4, 5], naranja: [13], rojo: [14, 15, 16, 17, 18] }
   },
-  juvenilA: {
+  juvenil_a: {
     canteraId: "juvenil_a",
     nombreCantera: "JUVENIL A",
     tituloCompeticion: "DIVISIÓN DE HONOR",
@@ -43,8 +43,8 @@ const CONFIG = {
 };
 
 // Credenciales de la base de datos en la nube (JSONBin.io)
-const BIN_ID = '6acbeddfac6210605a28b863';
-const API_KEY = '$2a$10$7vYa8GikHCcgoiO7LXnyTeZQSkXRSJqyGF6swRqNcUFMym20SgVRC';
+const BIN_ID = 'TU_BIN_ID';
+const API_KEY = 'TU_API_KEY';
 
 let todosLosEquipos = {};
 let calendariosJornadas = {};
@@ -198,9 +198,9 @@ function renderizarFormularioPartidos(partidos) {
         <img src="assets/escudos/${p.local.id}.png" onerror="this.style.opacity='0'">
         <span>${p.local.nombre}</span>
       </div>
-      <input type="number" class="goles-input" data-index="${index}" data-id="${p.local.id}" value="${gLocal}" min="0" onchange="guardarYActualizar()">
+      <input type="number" class="goles-input" data-index="${index}" data-id="${p.local.id}" value="${gLocal}" min="0" oninput="actualizarClasificacionLocal()">
       <span>-</span>
-      <input type="number" class="goles-input" data-index="${index}" data-id="${p.visitante.id}" value="${gVisitante}" min="0" onchange="guardarYActualizar()">
+      <input type="number" class="goles-input" data-index="${index}" data-id="${p.visitante.id}" value="${gVisitante}" min="0" oninput="actualizarClasificacionLocal()">
       <div class="equipo-box" style="justify-content: flex-end;">
         <span>${p.visitante.nombre}</span>
         <img src="assets/escudos/${p.visitante.id}.png" onerror="this.style.opacity='0'">
@@ -210,7 +210,8 @@ function renderizarFormularioPartidos(partidos) {
   });
 }
 
-window.guardarYActualizar = async function() {
+// Actualiza los cálculos y la vista previa localmente SIN consumir peticiones a la nube
+window.actualizarClasificacionLocal = function() {
   const inputJornada = document.getElementById('input-jornada');
   const numJornada = inputJornada ? inputJornada.value : '1';
   const clave = `${ligaActual}_j${numJornada}`;
@@ -227,8 +228,16 @@ window.guardarYActualizar = async function() {
 
   resultadosGlobales[clave] = jornadaResultados;
   actualizarClasificacion();
+};
 
-  // Guardado automático en la nube en segundo plano
+// Sube los datos a la nube SOLO al hacer clic en el botón
+window.guardarEnNube = async function(btn) {
+  actualizarClasificacionLocal();
+  
+  const textoOriginal = btn.textContent;
+  btn.textContent = "⏳ Guardando en la Nube...";
+  btn.disabled = true;
+
   try {
     await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
       method: 'PUT',
@@ -238,8 +247,19 @@ window.guardarYActualizar = async function() {
       },
       body: JSON.stringify(resultadosGlobales)
     });
+
+    btn.textContent = "✅ ¡Guardado con éxito!";
+    setTimeout(() => {
+      btn.textContent = textoOriginal;
+      btn.disabled = false;
+    }, 2000);
   } catch (err) {
     console.error("Error al sincronizar con la nube:", err);
+    btn.textContent = "❌ Error al guardar";
+    setTimeout(() => {
+      btn.textContent = textoOriginal;
+      btn.disabled = false;
+    }, 2000);
   }
 };
 
@@ -510,4 +530,23 @@ window.descargarImagen = function() {
   link.download = `Clasificacion_${CONFIG[ligaActual].nombreCantera}_J${document.getElementById('input-jornada').value}.png`;
   link.href = canvas.toDataURL('image/png');
   link.click();
+};
+
+window.cambiarTab = function(tab) {
+  const colPartidos = document.querySelector('.columna-partidos');
+  const colPreview = document.querySelector('.columna-preview');
+  const botones = document.querySelectorAll('.tab-btn');
+  
+  botones.forEach(b => b.classList.remove('active'));
+  
+  if (tab === 'partidos') {
+    colPartidos.style.display = 'block';
+    colPreview.style.display = 'none';
+    botones[0].classList.add('active');
+  } else {
+    colPartidos.style.display = 'none';
+    colPreview.style.display = 'block';
+    botones[1].classList.add('active');
+    renderizarCanvas(); // Redibuja el canvas al abrir la pestaña para asegurar nitidez
+  }
 };

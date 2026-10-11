@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Generador de Clasificaciones Cantera RM</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -10,16 +11,26 @@
     <h1>Generador de Clasificaciones - Cantera Real Madrid</h1>
     
     <div class="panel-seleccion">
-      <label for="select-liga">Competición / Equipo:</label>
-      <select id="select-liga" onchange="cambiarLiga()">
-        <option value="castilla">Real Madrid Castilla (1ª RFEF)</option>
-        <option value="rmc">Real Madrid C (2ª RFEF)</option>
-        <option value="juvenilA">Juvenil A (División de Honor)</option>
-        <option value="uyl">Juvenil A (UEFA Youth League)</option>
-      </select>
+      <div class="campo-grupo">
+        <label for="select-liga">Competición:</label>
+        <select id="select-liga" onchange="cambiarLiga()">
+          <option value="castilla">RM Castilla (1ª RFEF)</option>
+          <option value="rmc">Real Madrid C (2ª RFEF)</option>
+          <option value="juvenilA">Juvenil A (División de Honor)</option>
+          <option value="uyl">Juvenil A (UEFA Youth League)</option>
+        </select>
+      </div>
 
-      <label for="input-jornada">Jornada:</label>
-      <input type="number" id="input-jornada" value="1" min="1" max="38" onchange="renderizarCanvas()">
+      <div class="campo-grupo">
+        <label for="input-jornada">Jornada:</label>
+        <input type="number" id="input-jornada" value="1" min="1" max="38" onchange="renderizarCanvas()">
+      </div>
+    </div>
+
+    <!-- Pestañas exclusivas para móvil -->
+    <div class="mobile-tabs">
+      <button class="tab-btn active" onclick="cambiarTab('partidos')">⚽ Partidos</button>
+      <button class="tab-btn" onclick="cambiarTab('preview')">📊 Vista Previa</button>
     </div>
 
     <div class="main-content">
@@ -28,7 +39,7 @@
         <div id="partidos-lista">
           <!-- Se cargan dinámicamente -->
         </div>
-        <button class="btn-primario" onclick="actualizarClasificacion()">⚡ Actualizar Clasificación</button>
+        <button class="btn-primario" onclick="guardarEnNube(this)">⚡ Guardar y Actualizar en la Nube</button>
       </div>
 
       <div class="columna-preview">

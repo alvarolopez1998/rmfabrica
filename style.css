@@ -11,14 +11,15 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-color: #121218;
   color: #ffffff;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
 }
 
 .app-container {
@@ -29,13 +30,13 @@ body {
 h1 {
   text-align: center;
   color: #a29bfe;
-  font-size: 26px;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
+  font-size: 22px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 16px;
   color: #e0e0e0;
   margin-bottom: 15px;
   border-bottom: 2px solid #694ba2;
@@ -45,54 +46,86 @@ h2 {
 /* Panel Superior de Selección */
 .panel-seleccion {
   background: #1e1e2d;
-  padding: 18px 24px;
-  border-radius: 10px;
-  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
   display: flex;
-  gap: 25px;
+  gap: 15px;
   align-items: center;
+  justify-content: space-between;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.campo-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
 }
 
 .panel-seleccion label {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 13px;
   color: #a29bfe;
 }
 
 .panel-seleccion select, 
 .panel-seleccion input {
-  padding: 10px 14px;
-  border-radius: 6px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid #3d3d5c;
   background: #121218;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   outline: none;
 }
 
-.panel-seleccion select:focus, 
-.panel-seleccion input:focus {
-  border-color: #694ba2;
+/* Pestañas para Móvil (Ocultas en escritorio) */
+.mobile-tabs {
+  display: none;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-/* Disposición Principal en 2 Columnas */
+.tab-btn {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  background: #1e1e2d;
+  color: #a29bfe;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: #694ba2;
+  color: #ffffff;
+}
+
+/* Disposición Principal en 2 Columnas (Escritorio) */
 .main-content {
   display: flex;
-  gap: 30px;
+  gap: 25px;
   align-items: flex-start;
 }
 
-/* Columna de Partidos (Izquierda) */
-.columna-partidos {
+.columna-partidos, .columna-preview {
   flex: 1;
   background: #1e1e2d;
-  padding: 22px;
-  border-radius: 10px;
-  max-height: 880px;
-  overflow-y: auto;
+  padding: 20px;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.columna-partidos {
+  max-height: 85vh;
+  overflow-y: auto;
 }
 
 .partido-fila {
@@ -100,80 +133,57 @@ h2 {
   align-items: center;
   justify-content: space-between;
   background: #121218;
-  padding: 12px 15px;
-  margin-bottom: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
   border-radius: 8px;
   border-left: 4px solid #694ba2;
-  transition: transform 0.1s ease;
-}
-
-.partido-fila:hover {
-  transform: translateX(3px);
 }
 
 .equipo-box {
   display: flex;
   align-items: center;
-  gap: 12px;
-  width: 40%;
-  font-size: 14px;
+  gap: 10px;
+  width: 38%;
+  font-size: 13px;
   font-weight: bold;
 }
 
 .equipo-box img {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
 }
 
 .goles-input {
-  width: 50px;
-  height: 40px;
+  width: 45px;
+  height: 44px;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #3d3d5c;
   background: #1e1e2d;
   color: #fff;
 }
 
-.goles-input:focus {
-  border-color: #21d07a;
-  background: #121218;
-}
-
-/* Columna de Vista Previa Canvas (Derecha) */
-.columna-preview {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #1e1e2d;
-  padding: 22px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-
 canvas {
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
   background-color: #694ba2;
 }
 
 /* Botones de Acción */
 .btn-primario, .btn-descargar {
   width: 100%;
-  padding: 14px;
-  margin-top: 18px;
+  padding: 15px;
+  margin-top: 15px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.2s ease;
   letter-spacing: 0.5px;
 }
 
@@ -182,32 +192,48 @@ canvas {
   color: white;
 }
 
-.btn-primario:hover {
-  background: #563d87;
-  box-shadow: 0 4px 12px rgba(105, 75, 162, 0.4);
-}
-
 .btn-descargar {
   background: #21d07a;
   color: #000;
 }
 
-.btn-descargar:hover {
-  background: #1cb56a;
-  box-shadow: 0 4px 12px rgba(33, 208, 122, 0.4);
-}
-
-/* Responsive Móvil (iPhone 15 Pro) */
+/* Adaptación específica para iPhone y Móviles */
 @media (max-width: 900px) {
-  .main-content {
-    flex-direction: column;
+  body {
+    padding: 10px;
   }
-  
-  .columna-partidos, .columna-preview {
-    width: 100%;
+
+  h1 {
+    font-size: 18px;
+    margin-bottom: 15px;
   }
-  
+
   .panel-seleccion {
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-tabs {
+    display: flex;
+  }
+
+  .main-content {
+    display: block;
+  }
+
+  /* Por defecto en móvil ocultamos la vista previa y mostramos partidos */
+  .columna-partidos {
+    display: block;
+    max-height: none;
+    padding: 15px;
+  }
+
+  .columna-preview {
+    display: none;
+    padding: 15px;
+  }
+
+  .equipo-box {
+    font-size: 12px;
   }
 }
