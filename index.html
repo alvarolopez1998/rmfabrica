@@ -21,9 +21,16 @@
         </select>
       </div>
 
+      <!-- Selector de Jornada Estilo iOS (Stepper) -->
       <div class="campo-grupo">
-        <label for="input-jornada">Jornada:</label>
-        <input type="number" id="input-jornada" value="1" min="1" max="38" onchange="renderizarCanvas()">
+        <label>Jornada:</label>
+        <div class="ios-stepper">
+          <button type="button" class="stepper-btn" onclick="cambiarJornadaRelativa(-1)">−</button>
+          <span id="display-jornada" class="stepper-value">Jornada 1</span>
+          <button type="button" class="stepper-btn" onclick="cambiarJornadaRelativa(1)">+</button>
+          <!-- Input oculto para conservar la lógica interna -->
+          <input type="number" id="input-jornada" value="1" min="1" max="38" style="display: none;" onchange="renderizarCanvas()">
+        </div>
       </div>
     </div>
 
@@ -45,7 +52,10 @@
       <div class="columna-preview">
         <h2>Vista Previa</h2>
         <canvas id="canvas-tabla" width="800" height="1000"></canvas>
-        <button class="btn-descargar" onclick="descargarImagen()">📥 Descargar Imagen PNG</button>
+        <div class="botones-imagen">
+          <button class="btn-descargar" onclick="descargarImagenArchivo()">📥 Descargar Fichero</button>
+          <button class="btn-compartir" onclick="compartirImagenMovil()">📤 Compartir / Guardar en Fotos</button>
+        </div>
       </div>
     </div>
   </div>

@@ -133,6 +133,7 @@ window.cambiarLiga = function() {
 
   const cfg = CONFIG[ligaActual];
   const inputJornada = document.getElementById('input-jornada');
+  actualizarDisplayJornada()
   
   if (inputJornada) {
     inputJornada.max = cfg.maxJornadas;
@@ -187,6 +188,8 @@ function renderizarFormularioPartidos(partidos) {
   const clave = `${ligaActual}_j${numJornada}`;
   const golesGuardados = (resultadosGlobales[clave]) || {};
 
+  actualizarDisplayJornada();
+
   partidos.forEach((p, index) => {
     const gLocal = golesGuardados[`${index}_local`] !== undefined ? golesGuardados[`${index}_local`] : 0;
     const gVisitante = golesGuardados[`${index}_vis`] !== undefined ? golesGuardados[`${index}_vis`] : 0;
@@ -199,19 +202,23 @@ function renderizarFormularioPartidos(partidos) {
         <img src="assets/escudos/${p.local.id}.png" onerror="this.style.opacity='0'">
         <span class="equipo-nombre">${p.local.nombre}</span>
       </div>
-      <div class="marcador-box">
-        <input type="number" class="goles-input" data-index="${index}" value="${gLocal}" min="0" oninput="actualizarClasificacionLocal()">
-        <span>-</span>
-        <input type="number" class="goles-input" data-index="${index}" value="${gVisitante}" min="0" oninput="actualizarClasificacionLocal()">
+      
+      <div class="match-center">
+        <div class="marcador-box">
+          <input type="number" class="goles-input" data-index="${index}" value="${gLocal}" min="0" oninput="actualizarClasificacionLocal()">
+          <span>-</span>
+          <input type="number" class="goles-input" data-index="${index}" value="${gVisitante}" min="0" oninput="actualizarClasificacionLocal()">
+        </div>
+        <label class="suspendido-label" title="Marcar como suspendido/aplazado">
+          <input type="checkbox" class="suspendido-checkbox" data-index="${index}" ${esSuspendido} onchange="actualizarClasificacionLocal()">
+          <span>Susp.</span>
+        </label>
       </div>
+
       <div class="equipo-box vis">
         <span class="equipo-nombre">${p.visitante.nombre}</span>
         <img src="assets/escudos/${p.visitante.id}.png" onerror="this.style.opacity='0'">
       </div>
-      <label class="suspendido-label" title="Marcar como partido suspendido/aplazado">
-        <input type="checkbox" class="suspendido-checkbox" data-index="${index}" ${esSuspendido} onchange="actualizarClasificacionLocal()">
-        <span>⏸️ Susp.</span>
-      </label>
     `;
     contenedor.appendChild(div);
   });
@@ -534,16 +541,30 @@ function dibujarTextoAjustado(ctx, texto, x, y, maxAncho, color, sizeInicial = 2
   ctx.fillText(texto, x, y);
 }
 
-window.descargarImagen = async function() {
+// Nombre dinámico para el archivo según la liga y jornada
+function obtenerNombreFichero() {
+  const jornada = document.getElementById('input-jornada') ? document.getElementById('input-jornada').value : '1';
+  return `Clasificacion_${CONFIG[ligaActual].nombreCantera}_J${jornada}.png`;
+}
+
+// Opción 1: Descarga clásica como archivo
+window.descargarImagenArchivo = function() {
+  const canvas = document.getElementById('canvas-tabla');
+  if (!canvas) return;
+  const link = document.createElement('a');
+  link.download = obtenerNombreFichero();
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+};
+
+// Opción 2: Abrir menú nativo para compartir o guardar en la galería (Ideal para iPhone)
+window.compartirImagenMovil = async function() {
   const canvas = document.getElementById('canvas-tabla');
   if (!canvas) return;
 
-  const nombreFichero = `Clasificacion_${CONFIG[ligaActual].nombreCantera}_J${document.getElementById('input-jornada').value}.png`;
-
-  // Comprobar si el navegador soporta compartir ficheros (Ideal para iPhone/Móvil)
   if (navigator.canShare && navigator.share) {
     canvas.toBlob(async (blob) => {
-      const file = new File([blob], nombreFichero, { type: 'image/png' });
+      const file = new File([blob], obtenerNombreFichero(), { type: 'image/png' });
       try {
         await navigator.share({
           files: [file],
@@ -551,18 +572,13 @@ window.descargarImagen = async function() {
           text: 'Tabla de clasificación generada'
         });
       } catch (err) {
-        // Si el usuario cancela el menú de compartir, ignoramos el error
         if (err.name !== 'AbortError') {
           console.error('Error al compartir la imagen:', err);
         }
       }
     }, 'image/png');
   } else {
-    // Comportamiento clásico para PC (descarga directa como archivo)
-    const link = document.createElement('a');
-    link.download = nombreFichero;
-    link.href = canvas.toDataURL('image/png');
-    link.click();
+    alert('Tu dispositivo o navegador no soporta la función de compartir directa. Utiliza el botón de descargar archivo.');
   }
 };
 
@@ -584,3 +600,29 @@ window.cambiarTab = function(tab) {
     renderizarCanvas(); // Redibuja el canvas al abrir la pestaña para asegurar nitidez
   }
 };
+
+// Cambiar de jornada de forma fluida mediante los botones estilo iOS
+window.cambiarJornadaRelativa = function(delta) {
+  const inputJornada = document.getElementById('input-jornada');
+  if (!inputJornada) return;
+  const cfg = CONFIG[ligaActual];
+  const maxJ = cfg.maxJornadas || 38;
+  let val = parseInt(inputJornada.value) || 1;
+  
+  val += delta;
+  if (val < 1) val = 1;
+  if (val > maxJ) val = maxJ;
+  
+  inputJornada.value = val;
+  actualizarDisplayJornada();
+  cargarJornadaDesdeCalendario();
+  actualizarClasificacion();
+};
+
+function actualizarDisplayJornada() {
+  const inputJornada = document.getElementById('input-jornada');
+  const display = document.getElementById('display-jornada');
+  if (inputJornada && display) {
+    display.textContent = `Jornada ${inputJornada.value}`;
+  }
+}

@@ -24,15 +24,15 @@ body {
 }
 
 .app-container {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 0 auto;
 }
 
 h1 {
   text-align: center;
   color: #a29bfe;
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 22px;
+  margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
 
@@ -69,10 +69,9 @@ h2 {
   color: #a29bfe;
 }
 
-.panel-seleccion select, 
-.panel-seleccion input {
+.panel-seleccion select {
   width: 100%;
-  padding: 10px;
+  padding: 11px;
   border-radius: 8px;
   border: 1px solid #3d3d5c;
   background: #121218;
@@ -80,6 +79,44 @@ h2 {
   font-size: 14px;
   font-weight: bold;
   outline: none;
+}
+
+/* Selector Stepper Estilo iOS */
+.ios-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #121218;
+  border: 1px solid #3d3d5c;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 44px;
+}
+
+.stepper-btn {
+  background: transparent;
+  border: none;
+  color: #a29bfe;
+  font-size: 22px;
+  font-weight: bold;
+  width: 44px;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepper-btn:active {
+  background: rgba(162, 155, 254, 0.25);
+}
+
+.stepper-value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  flex: 1;
 }
 
 /* Pestañas Móvil */
@@ -106,41 +143,40 @@ h2 {
   color: #ffffff;
 }
 
-/* Disposición Principal */
+/* Disposición Principal (Escritorio por defecto: Fila horizontal) */
 .main-content {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   align-items: flex-start;
 }
 
 .columna-partidos, .columna-preview {
   flex: 1;
   background: #1e1e2d;
-  padding: 15px;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* Filas de Partidos Corregidas */
 .partido-fila {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #121218;
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+  padding: 8px 14px; /* Reducido de 12px 18px a 8px 14px */
+  margin-bottom: 8px;  /* Reducido de 10px a 8px */
+  border-radius: 10px;
   border-left: 4px solid #694ba2;
-  gap: 8px;
+  gap: 12px;
 }
 
 .equipo-box {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex: 1;
-  min-width: 0; /* Para evitar desbordamientos de texto */
-  font-size: 12px;
+  min-width: 0;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -151,39 +187,65 @@ h2 {
 .equipo-box.vis {
   justify-content: flex-end;
   text-align: right;
+  flex-direction: row-reverse;
 }
 
 .equipo-nombre {
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .equipo-box img {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
+  flex-shrink: 0;
+}
+
+.match-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   flex-shrink: 0;
 }
 
 .marcador-box {
   display: flex;
   align-items: center;
-  gap: 5px;
-  flex-shrink: 0;
+  gap: 6px;
 }
 
 .goles-input {
-  width: 40px;
-  height: 38px;
+  width: 44px;
+  height: 40px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #3d3d5c;
   background: #1e1e2d;
   color: #fff;
-  padding: 0;
+}
+
+.suspendido-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  background: #1e1e2d;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #3d3d5c;
+  color: #ff9f43;
+}
+
+.suspendido-checkbox {
+  cursor: pointer;
+  accent-color: #ff9f43;
+  width: 15px;
+  height: 15px;
 }
 
 canvas {
@@ -194,10 +256,18 @@ canvas {
   background-color: #694ba2;
 }
 
-.btn-primario, .btn-descargar {
-  width: 100%;
-  padding: 14px;
+.botones-imagen {
+  display: flex;
+  gap: 10px;
+}
+
+.botones-imagen button {
+  flex: 1;
   margin-top: 15px;
+}
+
+.btn-primario, .btn-descargar, .btn-compartir {
+  padding: 14px;
   border: none;
   border-radius: 8px;
   font-size: 15px;
@@ -205,34 +275,43 @@ canvas {
   cursor: pointer;
 }
 
-.btn-primario { background: #694ba2; color: white; }
+.btn-primario { width: 100%; background: #694ba2; color: white; margin-top: 15px; }
 .btn-descargar { background: #21d07a; color: #000; }
+.btn-compartir { background: #0984e3; color: #ffffff; }
 
-/* Responsive Móvil */
+/* Adaptación Exclusiva para Móvil (< 900px) */
 @media (max-width: 900px) {
-  .panel-seleccion { flex-direction: column; gap: 10px; }
+  .panel-seleccion { flex-direction: column; gap: 12px; }
   .mobile-tabs { display: flex; }
   .main-content { display: block; }
   .columna-preview { display: none; }
-}
 
-.suspendido-label {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
-  cursor: pointer;
-  background: #1e1e2d;
-  padding: 6px 8px;
-  border-radius: 6px;
-  border: 1px solid #3d3d5c;
-  flex-shrink: 0;
-  color: #ff9f43;
-}
+  .partido-fila {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+    gap: 14px;
+    background: #181824;
+    border: 1px solid #2d2d46;
+    border-left: 5px solid #694ba2;
+  }
 
-.suspendido-checkbox {
-  cursor: pointer;
-  accent-color: #ff9f43;
-  width: 16px;
-  height: 16px;
+  .equipo-box.local, .equipo-box.vis {
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+  }
+
+  .equipo-nombre {
+    white-space: normal;
+    font-size: 14px;
+  }
+
+  .match-center {
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 10px;
+  }
 }
