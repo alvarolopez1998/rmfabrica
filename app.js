@@ -42,22 +42,32 @@ const CONFIG = {
   }
 };
 
+// Credenciales de la base de datos en la nube (JSONBin.io)
+const BIN_ID = '6acbeddfac6210605a28b863';
+const API_KEY = '$2a$10$7vYa8GikHCcgoiO7LXnyTeZQSkXRSJqyGF6swRqNcUFMym20SgVRC';
+
 let todosLosEquipos = {};
 let calendariosJornadas = {};
+let resultadosGlobales = {};
 let cacheImagenes = {};
 let ligaActual = "castilla";
 let tablaEquipos = [];
 
 window.addEventListener('DOMContentLoaded', async () => {
   try {
-    const [resEquipos, resCalendarios] = await Promise.all([
+    const [resEquipos, resCalendarios, resResultados] = await Promise.all([
       fetch('./data/equipos.json').then(res => res.json()),
-      fetch('./data/calendarios.json').then(res => res.json())
+      fetch('./data/calendarios.json').then(res => res.json()),
+      fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`, {
+        headers: { 'X-Master-Key': API_KEY }
+      }).then(res => res.json()).catch(() => ({ record: {} }))
     ]);
     todosLosEquipos = resEquipos;
     calendariosJornadas = resCalendarios;
+    resultadosGlobales = resResultados.record || {};
   } catch (err) {
-    console.warn("No se pudieron cargar los archivos JSON externos.", err);
+    console.warn("No se pudieron cargar los datos.", err);
+    resultadosGlobales = {};
   } finally {
     cambiarLiga();
     
@@ -104,15 +114,13 @@ function precargarAssets(callback) {
   }
 }
 
-// Determinar la primera jornada sin resultados introducidos
 function obtenerPrimeraJornadaPendiente() {
   const cfg = CONFIG[ligaActual];
   const maxJ = cfg.maxJornadas || 38;
 
   for (let j = 1; j <= maxJ; j++) {
-    const claveStorage = `resultados_${ligaActual}_j${j}`;
-    const guardados = localStorage.getItem(claveStorage);
-    if (!guardados) {
+    const clave = `${ligaActual}_j${j}`;
+    if (!resultadosGlobales[clave]) {
       return j;
     }
   }
@@ -176,8 +184,8 @@ function renderizarFormularioPartidos(partidos) {
   
   const inputJornada = document.getElementById('input-jornada');
   const numJornada = inputJornada ? inputJornada.value : '1';
-  const claveStorage = `resultados_${ligaActual}_j${numJornada}`;
-  const golesGuardados = JSON.parse(localStorage.getItem(claveStorage)) || {};
+  const clave = `${ligaActual}_j${numJornada}`;
+  const golesGuardados = (resultadosGlobales[clave]) || {};
 
   partidos.forEach((p, index) => {
     const gLocal = golesGuardados[`${index}_local`] !== undefined ? golesGuardados[`${index}_local`] : 0;
@@ -217,19 +225,21 @@ window.guardarYActualizar = async function() {
     jornadaResultados[tipoKey] = parseInt(input.value) || 0;
   });
 
-  // Actualizar en memoria local
   resultadosGlobales[clave] = jornadaResultados;
   actualizarClasificacion();
 
-  // Guardar automáticamente en el fichero resultados.json del servidor
+  // Guardado automático en la nube en segundo plano
   try {
-    await fetch('/guardar', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    await fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': API_KEY
+      },
       body: JSON.stringify(resultadosGlobales)
     });
   } catch (err) {
-    console.error("Error al guardar automáticamente en el servidor:", err);
+    console.error("Error al sincronizar con la nube:", err);
   }
 };
 
@@ -241,10 +251,9 @@ window.actualizarClasificacion = function() {
   const cfg = CONFIG[ligaActual];
   const maxJ = cfg.maxJornadas || 38;
 
-  // Recorrer todas las jornadas guardadas en localStorage para acumular la tabla completa
   for (let j = 1; j <= maxJ; j++) {
-    const claveStorage = `resultados_${ligaActual}_j${j}`;
-    const guardados = JSON.parse(localStorage.getItem(claveStorage));
+    const clave = `${ligaActual}_j${j}`;
+    const guardados = resultadosGlobales[clave];
     
     if (guardados && calendariosJornadas[ligaActual] && calendariosJornadas[ligaActual][j]) {
       const partidosJ = calendariosJornadas[ligaActual][j];
@@ -288,44 +297,6 @@ window.actualizarClasificacion = function() {
   tablaEquipos.forEach((eq, idx) => { eq.posicion = idx + 1; });
 
   renderizarCanvas();
-};
-
-// Funciones para Exportar e Importar Fichero de Resultados
-window.exportarFicheroResultados = function() {
-  const datosExportar = {};
-  for (let i = 0; i < localStorage.length; i++) {
-    const clave = localStorage.key(i);
-    if (clave.startsWith('resultados_')) {
-      datosExportar[clave] = JSON.parse(localStorage.getItem(clave));
-    }
-  }
-  const blob = new Blob([JSON.stringify(datosExportar, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'resultados_cantera_rm.json';
-  a.click();
-  URL.revokeObjectURL(url);
-};
-
-window.importarFicheroResultados = function(event) {
-  const archivo = event.target.files[0];
-  if (!archivo) return;
-  const lector = new FileReader();
-  lector.onload = function(e) {
-    try {
-      const datos = JSON.parse(e.target.result);
-      for (const [clave, valor] of Object.entries(datos)) {
-        localStorage.setItem(clave, JSON.stringify(valor));
-      }
-      alert('¡Resultados y clasificación importados correctamente!');
-      cambiarLiga();
-    } catch (err) {
-      alert('Error al leer el archivo JSON de resultados.');
-      console.error(err);
-    }
-  };
-  lector.readAsText(archivo);
 };
 
 function obtenerRecorte(tabla, canteraId, esUYL) {
@@ -495,6 +466,7 @@ window.renderizarCanvas = function() {
       ctx.fillText(eq.pts, 402, y + 40);
 
       ctx.font = "bold 22px 'Now', sans-serif";
+      ctx.textAlign = "center";
       ctx.fillText(eq.pj, 458, y + 37);
       ctx.fillText(eq.v, 498, y + 37);
       ctx.fillText(eq.e, 538, y + 37);

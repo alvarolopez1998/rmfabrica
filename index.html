@@ -20,13 +20,6 @@
 
       <label for="input-jornada">Jornada:</label>
       <input type="number" id="input-jornada" value="1" min="1" max="38" onchange="renderizarCanvas()">
-
-      <div style="margin-left: auto; display: flex; gap: 10px;">
-        <button class="btn-primario" style="margin-top:0; padding: 10px 14px; font-size: 14px;" onclick="exportarFicheroResultados()">💾 Exportar Fichero</button>
-        <label class="btn-primario" style="margin-top:0; padding: 10px 14px; font-size: 14px; background: #2196f3; cursor: pointer; display: inline-flex; align-items: center; border-radius: 8px;">
-          📂 Cargar Fichero <input type="file" id="input-archivo-resultados" accept=".json" style="display:none" onchange="importarFicheroResultados(event)">
-        </label>
-      </div>
     </div>
 
     <div class="main-content">
