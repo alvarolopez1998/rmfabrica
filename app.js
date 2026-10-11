@@ -534,13 +534,36 @@ function dibujarTextoAjustado(ctx, texto, x, y, maxAncho, color, sizeInicial = 2
   ctx.fillText(texto, x, y);
 }
 
-window.descargarImagen = function() {
+window.descargarImagen = async function() {
   const canvas = document.getElementById('canvas-tabla');
   if (!canvas) return;
-  const link = document.createElement('a');
-  link.download = `Clasificacion_${CONFIG[ligaActual].nombreCantera}_J${document.getElementById('input-jornada').value}.png`;
-  link.href = canvas.toDataURL('image/png');
-  link.click();
+
+  const nombreFichero = `Clasificacion_${CONFIG[ligaActual].nombreCantera}_J${document.getElementById('input-jornada').value}.png`;
+
+  // Comprobar si el navegador soporta compartir ficheros (Ideal para iPhone/Móvil)
+  if (navigator.canShare && navigator.share) {
+    canvas.toBlob(async (blob) => {
+      const file = new File([blob], nombreFichero, { type: 'image/png' });
+      try {
+        await navigator.share({
+          files: [file],
+          title: 'Clasificación Cantera RM',
+          text: 'Tabla de clasificación generada'
+        });
+      } catch (err) {
+        // Si el usuario cancela el menú de compartir, ignoramos el error
+        if (err.name !== 'AbortError') {
+          console.error('Error al compartir la imagen:', err);
+        }
+      }
+    }, 'image/png');
+  } else {
+    // Comportamiento clásico para PC (descarga directa como archivo)
+    const link = document.createElement('a');
+    link.download = nombreFichero;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  }
 };
 
 window.cambiarTab = function(tab) {
