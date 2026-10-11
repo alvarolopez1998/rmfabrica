@@ -1,0 +1,2896 @@
+{
+  "castilla": {
+    "1": [
+      { "local": "aguilas", "visitante": "alcorcon" },
+      { "local": "algeciras", "visitante": "cartagena" },
+      { "local": "atletico_b", "visitante": "torremolinos" },
+      { "local": "antequera", "visitante": "ibiza" },
+      { "local": "ce_europa", "visitante": "real_jaen" },
+      { "local": "hercules", "visitante": "real_murcia" },
+      { "local": "huesca", "visitante": "sant_andreu" },
+      { "local": "majadahonda", "visitante": "villarreal_b" },
+      { "local": "nastic", "visitante": "zaragoza" },
+      { "local": "teruel", "visitante": "rm_castilla" }
+    ],
+    "2": [
+      { "local": "alcorcon", "visitante": "ce_europa" },
+      { "local": "cartagena", "visitante": "nastic" },
+      { "local": "hercules", "visitante": "atletico_b" },
+      { "local": "ibiza", "visitante": "majadahonda" },
+      { "local": "real_jaen", "visitante": "huesca" },
+      { "local": "real_murcia", "visitante": "teruel" },
+      { "local": "rm_castilla", "visitante": "torremolinos" },
+      { "local": "sant_andreu", "visitante": "aguilas" },
+      { "local": "villarreal_b", "visitante": "algeciras" },
+      { "local": "zaragoza", "visitante": "antequera" }
+    ],
+    "3": [
+      { "local": "aguilas", "visitante": "rm_castilla" },
+      { "local": "atletico_b", "visitante": "real_murcia" },
+      { "local": "antequera", "visitante": "alcorcon" },
+      { "local": "ce_europa", "visitante": "hercules" },
+      { "local": "huesca", "visitante": "villarreal_b" },
+      { "local": "ibiza", "visitante": "sant_andreu" },
+      { "local": "torremolinos", "visitante": "zaragoza" },
+      { "local": "majadahonda", "visitante": "cartagena" },
+      { "local": "nastic", "visitante": "algeciras" },
+      { "local": "teruel", "visitante": "real_jaen" }
+    ],
+    "4": [
+      { "local": "alcorcon", "visitante": "nastic" },
+      { "local": "algeciras", "visitante": "aguilas" },
+      { "local": "hercules", "visitante": "torremolinos" },
+      { "local": "huesca", "visitante": "atletico_b" },
+      { "local": "real_jaen", "visitante": "ibiza" },
+      { "local": "majadahonda", "visitante": "teruel" },
+      { "local": "real_murcia", "visitante": "ce_europa" },
+      { "local": "sant_andreu", "visitante": "rm_castilla" },
+      { "local": "villarreal_b", "visitante": "antequera" },
+      { "local": "zaragoza", "visitante": "cartagena" }
+    ],
+    "5": [
+      { "local": "aguilas", "visitante": "hercules" },
+      { "local": "atletico_b", "visitante": "villarreal_b" },
+      { "local": "antequera", "visitante": "real_jaen" },
+      { "local": "cartagena", "visitante": "real_murcia" },
+      { "local": "ce_europa", "visitante": "majadahonda" },
+      { "local": "ibiza", "visitante": "zaragoza" },
+      { "local": "torremolinos", "visitante": "algeciras" },
+      { "local": "nastic", "visitante": "sant_andreu" },
+      { "local": "rm_castilla", "visitante": "alcorcon" },
+      { "local": "teruel", "visitante": "huesca" }
+    ],
+    "6": [
+      { "local": "alcorcon", "visitante": "torremolinos" },
+      { "local": "algeciras", "visitante": "majadahonda" },
+      { "local": "cartagena", "visitante": "aguilas" },
+      { "local": "hercules", "visitante": "real_jaen" },
+      { "local": "huesca", "visitante": "ce_europa" },
+      { "local": "real_murcia", "visitante": "nastic" },
+      { "local": "rm_castilla", "visitante": "atletico_b" },
+      { "local": "sant_andreu", "visitante": "antequera" },
+      { "local": "villarreal_b", "visitante": "ibiza" },
+      { "local": "zaragoza", "visitante": "teruel" }
+    ],
+    "7": [
+      { "local": "aguilas", "visitante": "huesca" },
+      { "local": "atletico_b", "visitante": "zaragoza" },
+      { "local": "antequera", "visitante": "cartagena" },
+      { "local": "ce_europa", "visitante": "algeciras" },
+      { "local": "hercules", "visitante": "sant_andreu" },
+      { "local": "ibiza", "visitante": "rm_castilla" },
+      { "local": "real_jaen", "visitante": "villarreal_b" },
+      { "local": "torremolinos", "visitante": "nastic" },
+      { "local": "majadahonda", "visitante": "real_murcia" },
+      { "local": "teruel", "visitante": "alcorcon" }
+    ],
+    "8": [
+      { "local": "alcorcon", "visitante": "huesca" },
+      { "local": "aguilas", "visitante": "ibiza" },
+      { "local": "algeciras", "visitante": "hercules" },
+      { "local": "cartagena", "visitante": "ce_europa" },
+      { "local": "real_jaen", "visitante": "majadahonda" },
+      { "local": "real_murcia", "visitante": "zaragoza" },
+      { "local": "nastic", "visitante": "atletico_b" },
+      { "local": "rm_castilla", "visitante": "antequera" },
+      { "local": "sant_andreu", "visitante": "torremolinos" },
+      { "local": "villarreal_b", "visitante": "teruel" }
+    ],
+    "9": [
+      { "local": "alcorcon", "visitante": "ibiza" },
+      { "local": "algeciras", "visitante": "rm_castilla" },
+      { "local": "atletico_b", "visitante": "real_jaen" },
+      { "local": "ce_europa", "visitante": "zaragoza" },
+      { "local": "huesca", "visitante": "antequera" },
+      { "local": "torremolinos", "visitante": "real_murcia" },
+      { "local": "majadahonda", "visitante": "sant_andreu" },
+      { "local": "nastic", "visitante": "hercules" },
+      { "local": "teruel", "visitante": "aguilas" },
+      { "local": "villarreal_b", "visitante": "cartagena" }
+    ],
+    "10": [
+      { "local": "atletico_b", "visitante": "alcorcon" },
+      { "local": "antequera", "visitante": "real_murcia" },
+      { "local": "hercules", "visitante": "majadahonda" },
+      { "local": "huesca", "visitante": "nastic" },
+      { "local": "ibiza", "visitante": "ce_europa" },
+      { "local": "real_jaen", "visitante": "algeciras" },
+      { "local": "torremolinos", "visitante": "aguilas" },
+      { "local": "rm_castilla", "visitante": "cartagena" },
+      { "local": "sant_andreu", "visitante": "teruel" },
+      { "local": "zaragoza", "visitante": "villarreal_b" }
+    ],
+    "11": [
+      { "local": "alcorcon", "visitante": "real_jaen" },
+      { "local": "aguilas", "visitante": "nastic" },
+      { "local": "antequera", "visitante": "majadahonda" },
+      { "local": "cartagena", "visitante": "sant_andreu" },
+      { "local": "ce_europa", "visitante": "atletico_b" },
+      { "local": "real_murcia", "visitante": "algeciras" },
+      { "local": "rm_castilla", "visitante": "hercules" },
+      { "local": "teruel", "visitante": "ibiza" },
+      { "local": "villarreal_b", "visitante": "torremolinos" },
+      { "local": "zaragoza", "visitante": "huesca" }
+    ],
+    "12": [
+      { "local": "algeciras", "visitante": "antequera" },
+      { "local": "atletico_b", "visitante": "teruel" },
+      { "local": "ce_europa", "visitante": "sant_andreu" },
+      { "local": "hercules", "visitante": "villarreal_b" },
+      { "local": "ibiza", "visitante": "cartagena" },
+      { "local": "real_jaen", "visitante": "zaragoza" },
+      { "local": "torremolinos", "visitante": "huesca" },
+      { "local": "majadahonda", "visitante": "aguilas" },
+      { "local": "real_murcia", "visitante": "alcorcon" },
+      { "local": "nastic", "visitante": "rm_castilla" }
+    ],
+    "13": [
+      { "local": "alcorcon", "visitante": "algeciras" },
+      { "local": "aguilas", "visitante": "ce_europa" },
+      { "local": "antequera", "visitante": "torremolinos" },
+      { "local": "cartagena", "visitante": "real_jaen" },
+      { "local": "huesca", "visitante": "ibiza" },
+      { "local": "rm_castilla", "visitante": "real_murcia" },
+      { "local": "teruel", "visitante": "hercules" },
+      { "local": "sant_andreu", "visitante": "atletico_b" },
+      { "local": "villarreal_b", "visitante": "nastic" },
+      { "local": "zaragoza", "visitante": "majadahonda" }
+    ],
+    "14": [
+      { "local": "alcorcon", "visitante": "zaragoza" },
+      { "local": "algeciras", "visitante": "huesca" },
+      { "local": "ce_europa", "visitante": "villarreal_b" },
+      { "local": "hercules", "visitante": "antequera" },
+      { "local": "ibiza", "visitante": "atletico_b" },
+      { "local": "real_jaen", "visitante": "aguilas" },
+      { "local": "torremolinos", "visitante": "cartagena" },
+      { "local": "majadahonda", "visitante": "rm_castilla" },
+      { "local": "real_murcia", "visitante": "sant_andreu" },
+      { "local": "nastic", "visitante": "teruel" }
+    ],
+    "15": [
+      { "local": "atletico_b", "visitante": "majadahonda" },
+      { "local": "antequera", "visitante": "ce_europa" },
+      { "local": "cartagena", "visitante": "hercules" },
+      { "local": "huesca", "visitante": "real_murcia" },
+      { "local": "ibiza", "visitante": "nastic" },
+      { "local": "rm_castilla", "visitante": "real_jaen" },
+      { "local": "teruel", "visitante": "torremolinos" },
+      { "local": "sant_andreu", "visitante": "algeciras" },
+      { "local": "villarreal_b", "visitante": "alcorcon" },
+      { "local": "zaragoza", "visitante": "aguilas" }
+    ],
+    "16": [
+      { "local": "aguilas", "visitante": "villarreal_b" },
+      { "local": "algeciras", "visitante": "teruel" },
+      { "local": "cartagena", "visitante": "atletico_b" },
+      { "local": "hercules", "visitante": "ibiza" },
+      { "local": "torremolinos", "visitante": "ce_europa" },
+      { "local": "majadahonda", "visitante": "huesca" },
+      { "local": "real_murcia", "visitante": "real_jaen" },
+      { "local": "nastic", "visitante": "antequera" },
+      { "local": "rm_castilla", "visitante": "zaragoza" },
+      { "local": "sant_andreu", "visitante": "alcorcon" }
+    ],
+    "17": [
+      { "local": "alcorcon", "visitante": "majadahonda" },
+      { "local": "atletico_b", "visitante": "algeciras" },
+      { "local": "antequera", "visitante": "aguilas" },
+      { "local": "ce_europa", "visitante": "nastic" },
+      { "local": "huesca", "visitante": "rm_castilla" },
+      { "local": "ibiza", "visitante": "real_murcia" },
+      { "local": "real_jaen", "visitante": "torremolinos" },
+      { "local": "teruel", "visitante": "cartagena" },
+      { "local": "villarreal_b", "visitante": "sant_andreu" },
+      { "local": "zaragoza", "visitante": "hercules" }
+    ],
+    "18": [
+      { "local": "aguilas", "visitante": "atletico_b" },
+      { "local": "algeciras", "visitante": "zaragoza" },
+      { "local": "cartagena", "visitante": "huesca" },
+      { "local": "hercules", "visitante": "alcorcon" },
+      { "local": "torremolinos", "visitante": "ibiza" },
+      { "local": "real_murcia", "visitante": "villarreal_b" },
+      { "local": "nastic", "visitante": "majadahonda" },
+      { "local": "rm_castilla", "visitante": "ce_europa" },
+      { "local": "teruel", "visitante": "antequera" },
+      { "local": "sant_andreu", "visitante": "real_jaen" }
+    ],
+    "19": [
+      { "local": "alcorcon", "visitante": "cartagena" },
+      { "local": "antequera", "visitante": "atletico_b" },
+      { "local": "ce_europa", "visitante": "teruel" },
+      { "local": "huesca", "visitante": "hercules" },
+      { "local": "ibiza", "visitante": "algeciras" },
+      { "local": "real_jaen", "visitante": "nastic" },
+      { "local": "majadahonda", "visitante": "torremolinos" },
+      { "local": "real_murcia", "visitante": "aguilas" },
+      { "local": "villarreal_b", "visitante": "rm_castilla" },
+      { "local": "zaragoza", "visitante": "sant_andreu" }
+    ],
+    "20": [
+      { "local": "aguilas", "visitante": "torremolinos" },
+      { "local": "atletico_b", "visitante": "huesca" },
+      { "local": "cartagena", "visitante": "majadahonda" },
+      { "local": "hercules", "visitante": "ce_europa" },
+      { "local": "real_jaen", "visitante": "antequera" },
+      { "local": "nastic", "visitante": "alcorcon" },
+      { "local": "rm_castilla", "visitante": "algeciras" },
+      { "local": "teruel", "visitante": "villarreal_b" },
+      { "local": "sant_andreu", "visitante": "ibiza" },
+      { "local": "zaragoza", "visitante": "real_murcia" }
+    ],
+    "21": [
+      { "local": "alcorcon", "visitante": "teruel" },
+      { "local": "algeciras", "visitante": "nastic" },
+      { "local": "antequera", "visitante": "rm_castilla" },
+      { "local": "huesca", "visitante": "real_jaen" },
+      { "local": "ibiza", "visitante": "aguilas" },
+      { "local": "torremolinos", "visitante": "hercules" },
+      { "local": "majadahonda", "visitante": "ce_europa" },
+      { "local": "real_murcia", "visitante": "atletico_b" },
+      { "local": "sant_andreu", "visitante": "cartagena" },
+      { "local": "villarreal_b", "visitante": "zaragoza" }
+    ],
+    "22": [
+      { "local": "aguilas", "visitante": "algeciras" },
+      { "local": "atletico_b", "visitante": "hercules" },
+      { "local": "antequera", "visitante": "villarreal_b" },
+      { "local": "cartagena", "visitante": "ibiza" },
+      { "local": "ce_europa", "visitante": "real_murcia" },
+      { "local": "real_jaen", "visitante": "alcorcon" },
+      { "local": "nastic", "visitante": "huesca" },
+      { "local": "rm_castilla", "visitante": "sant_andreu" },
+      { "local": "teruel", "visitante": "majadahonda" },
+      { "local": "zaragoza", "visitante": "torremolinos" }
+    ],
+    "23": [
+      { "local": "alcorcon", "visitante": "antequera" },
+      { "local": "algeciras", "visitante": "ce_europa" },
+      { "local": "cartagena", "visitante": "zaragoza" },
+      { "local": "hercules", "visitante": "aguilas" },
+      { "local": "ibiza", "visitante": "teruel" },
+      { "local": "torremolinos", "visitante": "atletico_b" },
+      { "local": "majadahonda", "visitante": "real_jaen" },
+      { "local": "real_murcia", "visitante": "rm_castilla" },
+      { "local": "sant_andreu", "visitante": "nastic" },
+      { "local": "villarreal_b", "visitante": "huesca" }
+    ],
+    "24": [
+      { "local": "alcorcon", "visitante": "atletico_b" },
+      { "local": "antequera", "visitante": "hercules" },
+      { "local": "ce_europa", "visitante": "aguilas" },
+      { "local": "huesca", "visitante": "algeciras" },
+      { "local": "real_jaen", "visitante": "cartagena" },
+      { "local": "real_murcia", "visitante": "torremolinos" },
+      { "local": "nastic", "visitante": "villarreal_b" },
+      { "local": "rm_castilla", "visitante": "majadahonda" },
+      { "local": "teruel", "visitante": "sant_andreu" },
+      { "local": "zaragoza", "visitante": "ibiza" }
+    ],
+    "25": [
+      { "local": "aguilas", "visitante": "real_jaen" },
+      { "local": "algeciras", "visitante": "real_murcia" },
+      { "local": "atletico_b", "visitante": "nastic" },
+      { "local": "cartagena", "visitante": "rm_castilla" },
+      { "local": "hercules", "visitante": "teruel" },
+      { "local": "ibiza", "visitante": "villarreal_b" },
+      { "local": "torremolinos", "visitante": "alcorcon" },
+      { "local": "majadahonda", "visitante": "antequera" },
+      { "local": "sant_andreu", "visitante": "huesca" },
+      { "local": "zaragoza", "visitante": "ce_europa" }
+    ],
+    "26": [
+      { "local": "alcorcon", "visitante": "sant_andreu" },
+      { "local": "antequera", "visitante": "algeciras" },
+      { "local": "ce_europa", "visitante": "torremolinos" },
+      { "local": "huesca", "visitante": "majadahonda" },
+      { "local": "real_jaen", "visitante": "atletico_b" },
+      { "local": "real_murcia", "visitante": "cartagena" },
+      { "local": "nastic", "visitante": "aguilas" },
+      { "local": "rm_castilla", "visitante": "ibiza" },
+      { "local": "teruel", "visitante": "zaragoza" },
+      { "local": "villarreal_b", "visitante": "hercules" }
+    ],
+    "27": [
+      { "local": "aguilas", "visitante": "antequera" },
+      { "local": "algeciras", "visitante": "real_jaen" },
+      { "local": "atletico_b", "visitante": "ce_europa" },
+      { "local": "cartagena", "visitante": "teruel" },
+      { "local": "hercules", "visitante": "nastic" },
+      { "local": "ibiza", "visitante": "huesca" },
+      { "local": "torremolinos", "visitante": "villarreal_b" },
+      { "local": "majadahonda", "visitante": "alcorcon" },
+      { "local": "sant_andreu", "visitante": "real_murcia" },
+      { "local": "zaragoza", "visitante": "rm_castilla" }
+    ],
+    "28": [
+      { "local": "alcorcon", "visitante": "hercules" },
+      { "local": "algeciras", "visitante": "atletico_b" },
+      { "local": "antequera", "visitante": "zaragoza" },
+      { "local": "ce_europa", "visitante": "cartagena" },
+      { "local": "huesca", "visitante": "aguilas" },
+      { "local": "real_jaen", "visitante": "sant_andreu" },
+      { "local": "real_murcia", "visitante": "ibiza" },
+      { "local": "nastic", "visitante": "torremolinos" },
+      { "local": "rm_castilla", "visitante": "teruel" },
+      { "local": "villarreal_b", "visitante": "majadahonda" }
+    ],
+    "29": [
+      { "local": "aguilas", "visitante": "real_murcia" },
+      { "local": "atletico_b", "visitante": "rm_castilla" },
+      { "local": "cartagena", "visitante": "villarreal_b" },
+      { "local": "hercules", "visitante": "huesca" },
+      { "local": "ibiza", "visitante": "real_jaen" },
+      { "local": "torremolinos", "visitante": "antequera" },
+      { "local": "majadahonda", "visitante": "algeciras" },
+      { "local": "teruel", "visitante": "nastic" },
+      { "local": "sant_andreu", "visitante": "ce_europa" },
+      { "local": "zaragoza", "visitante": "alcorcon" }
+    ],
+    "30": [
+      { "local": "alcorcon", "visitante": "rm_castilla" },
+      { "local": "algeciras", "visitante": "torremolinos" },
+      { "local": "antequera", "visitante": "sant_andreu" },
+      { "local": "ce_europa", "visitante": "ibiza" },
+      { "local": "huesca", "visitante": "zaragoza" },
+      { "local": "real_jaen", "visitante": "teruel" },
+      { "local": "majadahonda", "visitante": "atletico_b" },
+      { "local": "real_murcia", "visitante": "hercules" },
+      { "local": "nastic", "visitante": "cartagena" },
+      { "local": "villarreal_b", "visitante": "aguilas" }
+    ],
+    "31": [
+      { "local": "aguilas", "visitante": "majadahonda" },
+      { "local": "atletico_b", "visitante": "sant_andreu" },
+      { "local": "cartagena", "visitante": "antequera" },
+      { "local": "ce_europa", "visitante": "huesca" },
+      { "local": "hercules", "visitante": "algeciras" },
+      { "local": "ibiza", "visitante": "alcorcon" },
+      { "local": "torremolinos", "visitante": "real_jaen" },
+      { "local": "rm_castilla", "visitante": "villarreal_b" },
+      { "local": "teruel", "visitante": "real_murcia" },
+      { "local": "zaragoza", "visitante": "nastic" }
+    ],
+    "32": [
+      { "local": "alcorcon", "visitante": "real_murcia" },
+      { "local": "aguilas", "visitante": "cartagena" },
+      { "local": "algeciras", "visitante": "ibiza" },
+      { "local": "antequera", "visitante": "teruel" },
+      { "local": "huesca", "visitante": "torremolinos" },
+      { "local": "real_jaen", "visitante": "rm_castilla" },
+      { "local": "majadahonda", "visitante": "hercules" },
+      { "local": "nastic", "visitante": "ce_europa" },
+      { "local": "sant_andreu", "visitante": "zaragoza" },
+      { "local": "villarreal_b", "visitante": "atletico_b" }
+    ],
+    "33": [
+      { "local": "atletico_b", "visitante": "aguilas" },
+      { "local": "cartagena", "visitante": "alcorcon" },
+      { "local": "torremolinos", "visitante": "majadahonda" },
+      { "local": "real_murcia", "visitante": "antequera" },
+      { "local": "nastic", "visitante": "ibiza" },
+      { "local": "rm_castilla", "visitante": "huesca" },
+      { "local": "teruel", "visitante": "algeciras" },
+      { "local": "sant_andreu", "visitante": "hercules" },
+      { "local": "villarreal_b", "visitante": "ce_europa" },
+      { "local": "zaragoza", "visitante": "real_jaen" }
+    ],
+    "34": [
+      { "local": "aguilas", "visitante": "zaragoza" },
+      { "local": "algeciras", "visitante": "villarreal_b" },
+      { "local": "atletico_b", "visitante": "cartagena" },
+      { "local": "ce_europa", "visitante": "alcorcon" },
+      { "local": "hercules", "visitante": "rm_castilla" },
+      { "local": "huesca", "visitante": "teruel" },
+      { "local": "ibiza", "visitante": "antequera" },
+      { "local": "real_jaen", "visitante": "real_murcia" },
+      { "local": "torremolinos", "visitante": "sant_andreu" },
+      { "local": "majadahonda", "visitante": "nastic" }
+    ],
+    "35": [
+      { "local": "alcorcon", "visitante": "aguilas" },
+      { "local": "antequera", "visitante": "huesca" },
+      { "local": "cartagena", "visitante": "algeciras" },
+      { "local": "ibiza", "visitante": "torremolinos" },
+      { "local": "real_jaen", "visitante": "hercules" },
+      { "local": "real_murcia", "visitante": "majadahonda" },
+      { "local": "rm_castilla", "visitante": "nastic" },
+      { "local": "teruel", "visitante": "ce_europa" },
+      { "local": "sant_andreu", "visitante": "villarreal_b" },
+      { "local": "zaragoza", "visitante": "atletico_b" }
+    ],
+    "36": [
+      { "local": "aguilas", "visitante": "teruel" },
+      { "local": "algeciras", "visitante": "sant_andreu" },
+      { "local": "atletico_b", "visitante": "ibiza" },
+      { "local": "ce_europa", "visitante": "antequera" },
+      { "local": "hercules", "visitante": "cartagena" },
+      { "local": "huesca", "visitante": "alcorcon" },
+      { "local": "torremolinos", "visitante": "rm_castilla" },
+      { "local": "majadahonda", "visitante": "zaragoza" },
+      { "local": "nastic", "visitante": "real_jaen" },
+      { "local": "villarreal_b", "visitante": "real_murcia" }
+    ],
+    "37": [
+      { "local": "alcorcon", "visitante": "villarreal_b" },
+      { "local": "antequera", "visitante": "nastic" },
+      { "local": "cartagena", "visitante": "torremolinos" },
+      { "local": "ibiza", "visitante": "hercules" },
+      { "local": "real_jaen", "visitante": "ce_europa" },
+      { "local": "real_murcia", "visitante": "huesca" },
+      { "local": "rm_castilla", "visitante": "aguilas" },
+      { "local": "teruel", "visitante": "atletico_b" },
+      { "local": "sant_andreu", "visitante": "majadahonda" },
+      { "local": "zaragoza", "visitante": "algeciras" }
+    ],
+    "38": [
+      { "local": "aguilas", "visitante": "sant_andreu" },
+      { "local": "algeciras", "visitante": "alcorcon" },
+      { "local": "atletico_b", "visitante": "antequera" },
+      { "local": "ce_europa", "visitante": "rm_castilla" },
+      { "local": "hercules", "visitante": "zaragoza" },
+      { "local": "huesca", "visitante": "cartagena" },
+      { "local": "torremolinos", "visitante": "teruel" },
+      { "local": "majadahonda", "visitante": "ibiza" },
+      { "local": "nastic", "visitante": "real_murcia" },
+      { "local": "villarreal_b", "visitante": "real_jaen" }
+    ]
+  }, "uyl": {
+    "1": [
+      { "local": "aek", "visitante": "lask" },
+      { "local": "oporto", "visitante": "man_city" },
+      { "local": "brujas", "visitante": "aston_villa" },
+      { "local": "lille", "visitante": "betis" },
+      { "local": "juvenil_a", "visitante": "inter" },
+      { "local": "dortmund", "visitante": "villarreal" },
+      { "local": "stuttgart", "visitante": "viking" },
+      { "local": "napoles", "visitante": "arsenal" },
+      { "local": "psg", "visitante": "slavia" },
+      { "local": "sporting", "visitante": "galatasaray" },
+      { "local": "liverpool", "visitante": "atletico" },
+      { "local": "barcelona", "visitante": "feyenoord" },
+      { "local": "fenerbache", "visitante": "roma" },
+      { "local": "psv", "visitante": "shakhtar" },
+      { "local": "slavia_praha", "visitante": "lens" },
+      { "local": "man_utd", "visitante": "sabah" },
+      { "local": "como", "visitante": "leipzig" },
+      { "local": "bayern", "visitante": "bodo" }
+    ],
+    "2": [
+      { "local": "lens", "visitante": "sporting" },
+      { "local": "sabah", "visitante": "slavia_praha" },
+      { "local": "viking", "visitante": "bayern" },
+      { "local": "galatasaray", "visitante": "barcelona" },
+      { "local": "arsenal", "visitante": "lille" },
+      { "local": "leipzig", "visitante": "psv" },
+      { "local": "inter", "visitante": "brujas" },
+      { "local": "villarreal", "visitante": "napoles" },
+      { "local": "atletico", "visitante": "man_utd" },
+      { "local": "bodo", "visitante": "dortmund" },
+      { "local": "feyenoord", "visitante": "como" },
+      { "local": "lask", "visitante": "liverpool" },
+      { "local": "betis", "visitante": "oporto" },
+      { "local": "shakhtar", "visitante": "aek" },
+      { "local": "slavia", "visitante": "stuttgart" },
+      { "local": "roma", "visitante": "juvenil_a" },
+      { "local": "aston_villa", "visitante": "fenerbache" },
+      { "local": "man_city", "visitante": "psg" }
+    ],
+    "3": [
+      { "local": "oporto", "visitante": "psv" },
+      { "local": "fenerbache", "visitante": "slavia_praha" },
+      { "local": "sabah", "visitante": "dortmund" },
+      { "local": "roma", "visitante": "slavia" },
+      { "local": "psg", "visitante": "barcelona" },
+      { "local": "napoles", "visitante": "bodo" },
+      { "local": "stuttgart", "visitante": "atletico" },
+      { "local": "liverpool", "visitante": "villarreal" },
+      { "local": "man_city", "visitante": "aek" },
+      { "local": "como", "visitante": "man_utd" },
+      { "local": "lille", "visitante": "galatasaray" },
+      { "local": "aston_villa", "visitante": "viking" },
+      { "local": "brujas", "visitante": "lens" },
+      { "local": "sporting", "visitante": "lask" },
+      { "local": "bayern", "visitante": "arsenal" },
+      { "local": "inter", "visitante": "shakhtar" },
+      { "local": "juvenil_a", "visitante": "leipzig" },
+      { "local": "betis", "visitante": "feyenoord" }
+    ],
+    "4": [
+      { "local": "bodo", "visitante": "lille" },
+      { "local": "galatasaray", "visitante": "stuttgart" },
+      { "local": "shakhtar", "visitante": "sporting" },
+      { "local": "villarreal", "visitante": "psg" },
+      { "local": "feyenoord", "visitante": "inter" },
+      { "local": "man_utd", "visitante": "roma" },
+      { "local": "lask", "visitante": "slavia" },
+      { "local": "atletico", "visitante": "bayern" },
+      { "local": "barcelona", "visitante": "aston_villa" },
+      { "local": "aek", "visitante": "juvenil_a" },
+      { "local": "oporto", "visitante": "napoles" },
+      { "local": "fenerbache", "visitante": "liverpool" },
+      { "local": "viking", "visitante": "sabah" },
+      { "local": "psv", "visitante": "brujas" },
+      { "local": "lens", "visitante": "como" },
+      { "local": "slavia_praha", "visitante": "arsenal" },
+      { "local": "dortmund", "visitante": "betis" },
+      { "local": "leipzig", "visitante": "man_city" }
+    ],
+    "5": [
+      { "local": "bodo", "visitante": "lask" },
+      { "local": "galatasaray", "visitante": "aston_villa" },
+      { "local": "arsenal", "visitante": "dortmund" },
+      { "local": "slavia", "visitante": "betis" },
+      { "local": "feyenoord", "visitante": "oporto" },
+      { "local": "como", "visitante": "aek" },
+      { "local": "man_city", "visitante": "napoles" },
+      { "local": "leipzig", "visitante": "lens" },
+      { "local": "juvenil_a", "visitante": "psv" },
+      { "local": "sabah", "visitante": "barcelona" },
+      { "local": "shakhtar", "visitante": "fenerbache" },
+      { "local": "slavia_praha", "visitante": "villarreal" },
+      { "local": "psg", "visitante": "roma" },
+      { "local": "brujas", "visitante": "liverpool" },
+      { "local": "inter", "visitante": "stuttgart" },
+      { "local": "lille", "visitante": "bayern" },
+      { "local": "sporting", "visitante": "man_utd" },
+      { "local": "atletico", "visitante": "viking" }
+    ],
+    "6": [
+      { "local": "viking", "visitante": "feyenoord" },
+      { "local": "villarreal", "visitante": "sabah" },
+      { "local": "aek", "visitante": "galatasaray" },
+      { "local": "roma", "visitante": "sporting" },
+      { "local": "man_utd", "visitante": "leipzig" },
+      { "local": "napoles", "visitante": "brujas" },
+      { "local": "aston_villa", "visitante": "psg" },
+      { "local": "barcelona", "visitante": "man_city" },
+      { "local": "bayern", "visitante": "slavia_praha" },
+      { "local": "betis", "visitante": "como" },
+      { "local": "slavia", "visitante": "shakhtar" },
+      { "local": "arsenal", "visitante": "juvenil_a" },
+      { "local": "psv", "visitante": "atletico" },
+      { "local": "lens", "visitante": "bodo" },
+      { "local": "stuttgart", "visitante": "lille" },
+      { "local": "lask", "visitante": "fenerbache" },
+      { "local": "dortmund", "visitante": "inter" },
+      { "local": "liverpool", "visitante": "oporto" }
+    ]
+  }, "juvenilA": {
+    "1": [
+      {
+        "local": "atletico",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "albacete"
+      },
+      {
+        "local": "trival",
+        "visitante": "leganes"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "toledo",
+        "visitante": "talavera"
+      },
+      {
+        "local": "merida",
+        "visitante": "getafe"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "rayo",
+        "visitante": "alcorcon"
+      }
+    ],
+    "2": [
+      {
+        "local": "union_adarve",
+        "visitante": "rayo"
+      },
+      {
+        "local": "albacete",
+        "visitante": "atletico"
+      },
+      {
+        "local": "leganes",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "trival"
+      },
+      {
+        "local": "talavera",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "getafe",
+        "visitante": "toledo"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "merida"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "sp_hortaleza"
+      }
+    ],
+    "3": [
+      {
+        "local": "union_adarve",
+        "visitante": "albacete"
+      },
+      {
+        "local": "atletico",
+        "visitante": "leganes"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "trival",
+        "visitante": "talavera"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "getafe"
+      },
+      {
+        "local": "toledo",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "merida",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "rayo",
+        "visitante": "sp_hortaleza"
+      }
+    ],
+    "4": [
+      {
+        "local": "albacete",
+        "visitante": "rayo"
+      },
+      {
+        "local": "leganes",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "atletico"
+      },
+      {
+        "local": "talavera",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "getafe",
+        "visitante": "trival"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "toledo"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "merida"
+      }
+    ],
+    "5": [
+      {
+        "local": "albacete",
+        "visitante": "leganes"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "atletico",
+        "visitante": "talavera"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "getafe"
+      },
+      {
+        "local": "trival",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "toledo",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "rayo",
+        "visitante": "merida"
+      }
+    ],
+    "6": [
+      {
+        "local": "leganes",
+        "visitante": "rayo"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "albacete"
+      },
+      {
+        "local": "talavera",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "getafe",
+        "visitante": "atletico"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "trival"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "merida",
+        "visitante": "toledo"
+      }
+    ],
+    "7": [
+      {
+        "local": "leganes",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "albacete",
+        "visitante": "talavera"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "getafe"
+      },
+      {
+        "local": "atletico",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "trival",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "merida"
+      },
+      {
+        "local": "rayo",
+        "visitante": "toledo"
+      }
+    ],
+    "8": [
+      {
+        "local": "majadahonda",
+        "visitante": "rayo"
+      },
+      {
+        "local": "talavera",
+        "visitante": "leganes"
+      },
+      {
+        "local": "getafe",
+        "visitante": "albacete"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "atletico"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "merida",
+        "visitante": "trival"
+      },
+      {
+        "local": "toledo",
+        "visitante": "juvenil_a"
+      }
+    ],
+    "9": [
+      {
+        "local": "majadahonda",
+        "visitante": "talavera"
+      },
+      {
+        "local": "leganes",
+        "visitante": "getafe"
+      },
+      {
+        "local": "albacete",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "atletico",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "merida"
+      },
+      {
+        "local": "trival",
+        "visitante": "toledo"
+      },
+      {
+        "local": "rayo",
+        "visitante": "juvenil_a"
+      }
+    ],
+    "10": [
+      {
+        "local": "talavera",
+        "visitante": "rayo"
+      },
+      {
+        "local": "getafe",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "leganes"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "albacete"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "merida",
+        "visitante": "atletico"
+      },
+      {
+        "local": "toledo",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "trival"
+      }
+    ],
+    "11": [
+      {
+        "local": "talavera",
+        "visitante": "getafe"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "leganes",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "albacete",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "merida"
+      },
+      {
+        "local": "atletico",
+        "visitante": "toledo"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "rayo",
+        "visitante": "trival"
+      }
+    ],
+    "12": [
+      {
+        "local": "getafe",
+        "visitante": "rayo"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "talavera"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "leganes"
+      },
+      {
+        "local": "merida",
+        "visitante": "albacete"
+      },
+      {
+        "local": "toledo",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "atletico"
+      },
+      {
+        "local": "trival",
+        "visitante": "las_rozas"
+      }
+    ],
+    "13": [
+      {
+        "local": "getafe",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "talavera",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "leganes",
+        "visitante": "merida"
+      },
+      {
+        "local": "albacete",
+        "visitante": "toledo"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "atletico",
+        "visitante": "trival"
+      },
+      {
+        "local": "rayo",
+        "visitante": "las_rozas"
+      }
+    ],
+    "14": [
+      {
+        "local": "rayo",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "getafe"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "talavera"
+      },
+      {
+        "local": "merida",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "toledo",
+        "visitante": "leganes"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "albacete"
+      },
+      {
+        "local": "trival",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "atletico"
+      }
+    ],
+    "15": [
+      {
+        "local": "r_alcobendas",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "getafe",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "talavera",
+        "visitante": "merida"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "toledo"
+      },
+      {
+        "local": "leganes",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "albacete",
+        "visitante": "trival"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "atletico",
+        "visitante": "rayo"
+      }
+    ],
+    "16": [
+      {
+        "local": "union_adarve",
+        "visitante": "atletico"
+      },
+      {
+        "local": "albacete",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "leganes",
+        "visitante": "trival"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "talavera",
+        "visitante": "toledo"
+      },
+      {
+        "local": "getafe",
+        "visitante": "merida"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "rayo"
+      }
+    ],
+    "17": [
+      {
+        "local": "rayo",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "atletico",
+        "visitante": "albacete"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "leganes"
+      },
+      {
+        "local": "trival",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "talavera"
+      },
+      {
+        "local": "toledo",
+        "visitante": "getafe"
+      },
+      {
+        "local": "merida",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "alcorcon"
+      }
+    ],
+    "18": [
+      {
+        "local": "albacete",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "leganes",
+        "visitante": "atletico"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "talavera",
+        "visitante": "trival"
+      },
+      {
+        "local": "getafe",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "toledo"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "merida"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "rayo"
+      }
+    ],
+    "19": [
+      {
+        "local": "rayo",
+        "visitante": "albacete"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "leganes"
+      },
+      {
+        "local": "atletico",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "talavera"
+      },
+      {
+        "local": "trival",
+        "visitante": "getafe"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "toledo",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "merida",
+        "visitante": "sp_hortaleza"
+      }
+    ],
+    "20": [
+      {
+        "local": "leganes",
+        "visitante": "albacete"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "talavera",
+        "visitante": "atletico"
+      },
+      {
+        "local": "getafe",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "trival"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "toledo"
+      },
+      {
+        "local": "merida",
+        "visitante": "rayo"
+      }
+    ],
+    "21": [
+      {
+        "local": "rayo",
+        "visitante": "leganes"
+      },
+      {
+        "local": "albacete",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "talavera"
+      },
+      {
+        "local": "atletico",
+        "visitante": "getafe"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "trival",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "toledo",
+        "visitante": "merida"
+      }
+    ],
+    "22": [
+      {
+        "local": "majadahonda",
+        "visitante": "leganes"
+      },
+      {
+        "local": "talavera",
+        "visitante": "albacete"
+      },
+      {
+        "local": "getafe",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "atletico"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "trival"
+      },
+      {
+        "local": "merida",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "toledo",
+        "visitante": "rayo"
+      }
+    ],
+    "23": [
+      {
+        "local": "rayo",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "leganes",
+        "visitante": "talavera"
+      },
+      {
+        "local": "albacete",
+        "visitante": "getafe"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "atletico",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "trival",
+        "visitante": "merida"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "toledo"
+      }
+    ],
+    "24": [
+      {
+        "local": "talavera",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "getafe",
+        "visitante": "leganes"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "albacete"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "atletico"
+      },
+      {
+        "local": "merida",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "toledo",
+        "visitante": "trival"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "rayo"
+      }
+    ],
+    "25": [
+      {
+        "local": "rayo",
+        "visitante": "talavera"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "getafe"
+      },
+      {
+        "local": "leganes",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "albacete",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "atletico",
+        "visitante": "merida"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "toledo"
+      },
+      {
+        "local": "trival",
+        "visitante": "juvenil_a"
+      }
+    ],
+    "26": [
+      {
+        "local": "getafe",
+        "visitante": "talavera"
+      },
+      {
+        "local": "r_alcobendas",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "leganes"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "albacete"
+      },
+      {
+        "local": "merida",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "toledo",
+        "visitante": "atletico"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "las_rozas"
+      },
+      {
+        "local": "trival",
+        "visitante": "rayo"
+      }
+    ],
+    "27": [
+      {
+        "local": "rayo",
+        "visitante": "getafe"
+      },
+      {
+        "local": "talavera",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "leganes",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "albacete",
+        "visitante": "merida"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "toledo"
+      },
+      {
+        "local": "atletico",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "trival"
+      }
+    ],
+    "28": [
+      {
+        "local": "r_alcobendas",
+        "visitante": "getafe"
+      },
+      {
+        "local": "alcorcon",
+        "visitante": "talavera"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "merida",
+        "visitante": "leganes"
+      },
+      {
+        "local": "toledo",
+        "visitante": "albacete"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "trival",
+        "visitante": "atletico"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "rayo"
+      }
+    ],
+    "29": [
+      {
+        "local": "r_alcobendas",
+        "visitante": "rayo"
+      },
+      {
+        "local": "getafe",
+        "visitante": "alcorcon"
+      },
+      {
+        "local": "talavera",
+        "visitante": "sp_hortaleza"
+      },
+      {
+        "local": "majadahonda",
+        "visitante": "merida"
+      },
+      {
+        "local": "leganes",
+        "visitante": "toledo"
+      },
+      {
+        "local": "albacete",
+        "visitante": "juvenil_a"
+      },
+      {
+        "local": "union_adarve",
+        "visitante": "trival"
+      },
+      {
+        "local": "atletico",
+        "visitante": "las_rozas"
+      }
+    ],
+    "30": [
+      {
+        "local": "alcorcon",
+        "visitante": "r_alcobendas"
+      },
+      {
+        "local": "sp_hortaleza",
+        "visitante": "getafe"
+      },
+      {
+        "local": "merida",
+        "visitante": "talavera"
+      },
+      {
+        "local": "toledo",
+        "visitante": "majadahonda"
+      },
+      {
+        "local": "juvenil_a",
+        "visitante": "leganes"
+      },
+      {
+        "local": "trival",
+        "visitante": "albacete"
+      },
+      {
+        "local": "las_rozas",
+        "visitante": "union_adarve"
+      },
+      {
+        "local": "rayo",
+        "visitante": "atletico"
+      }
+    ]
+  },
+  "rmc": {
+    "1": [
+      {
+        "local": "real_madrid_c",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "numancia"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "talavera"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "sanse"
+      },
+      {
+        "local": "conquense",
+        "visitante": "getafe_b"
+      }
+    ],
+    "2": [
+      {
+        "local": "albacete_b",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "numancia",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "conquense"
+      },
+      {
+        "local": "sanse",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "talavera",
+        "visitante": "real_madrid_c"
+      }
+    ],
+    "3": [
+      {
+        "local": "real_madrid_c",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "talavera"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "sanse",
+        "visitante": "numancia"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "conquense",
+        "visitante": "salamanca"
+      }
+    ],
+    "4": [
+      {
+        "local": "albacete_b",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "conquense"
+      },
+      {
+        "local": "numancia",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "sanse"
+      },
+      {
+        "local": "talavera",
+        "visitante": "valladolid_b"
+      }
+    ],
+    "5": [
+      {
+        "local": "albacete_b",
+        "visitante": "talavera"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "conquense"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "numancia"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "sanse",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "salamanca"
+      }
+    ],
+    "6": [
+      {
+        "local": "real_madrid_c",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "numancia"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "sanse"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "talavera",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "conquense",
+        "visitante": "albacete_b"
+      }
+    ],
+    "7": [
+      {
+        "local": "atletico_c",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "numancia",
+        "visitante": "talavera"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "sanse",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "conquense",
+        "visitante": "at_paso"
+      }
+    ],
+    "8": [
+      {
+        "local": "albacete_b",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "real_madrid_c",
+        "visitante": "conquense"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "numancia",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "sanse"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "talavera",
+        "visitante": "salamanca"
+      }
+    ],
+    "9": [
+      {
+        "local": "atletico_c",
+        "visitante": "talavera"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "sanse",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "numancia"
+      },
+      {
+        "local": "conquense",
+        "visitante": "rsd_alcala"
+      }
+    ],
+    "10": [
+      {
+        "local": "albacete_b",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "real_madrid_c",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "sanse"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "numancia",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "talavera",
+        "visitante": "conquense"
+      }
+    ],
+    "11": [
+      {
+        "local": "navalcarnero",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "talavera"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "numancia"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "sanse",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "conquense",
+        "visitante": "guadalajara"
+      }
+    ],
+    "12": [
+      {
+        "local": "albacete_b",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "real_madrid_c",
+        "visitante": "numancia"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "sanse"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "conquense"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "talavera",
+        "visitante": "tordesillas"
+      }
+    ],
+    "13": [
+      {
+        "local": "real_madrid_c",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "numancia",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "conquense"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "talavera"
+      },
+      {
+        "local": "sanse",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "getafe_b"
+      }
+    ],
+    "14": [
+      {
+        "local": "albacete_b",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "numancia"
+      },
+      {
+        "local": "talavera",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "conquense",
+        "visitante": "sanse"
+      }
+    ],
+    "15": [
+      {
+        "local": "getafe_b",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "numancia",
+        "visitante": "conquense"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "sanse",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "talavera",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "rsd_alcala"
+      }
+    ],
+    "16": [
+      {
+        "local": "real_madrid_c",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "talavera"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "numancia"
+      },
+      {
+        "local": "sanse",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "conquense",
+        "visitante": "tordesillas"
+      }
+    ],
+    "17": [
+      {
+        "local": "albacete_b",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "real_madrid_c",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "numancia",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "conquense"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "talavera",
+        "visitante": "sanse"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "valladolid_b"
+      }
+    ],
+    "18": [
+      {
+        "local": "albacete_b",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "numancia"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "talavera"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "sanse",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "conquense",
+        "visitante": "real_madrid_c"
+      }
+    ],
+    "19": [
+      {
+        "local": "real_madrid_c",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "conquense"
+      },
+      {
+        "local": "numancia",
+        "visitante": "sanse"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "talavera",
+        "visitante": "atletico_c"
+      }
+    ],
+    "20": [
+      {
+        "local": "albacete_b",
+        "visitante": "conquense"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "talavera"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "numancia",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "sanse",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "calvo_sotelo"
+      }
+    ],
+    "21": [
+      {
+        "local": "real_madrid_c",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "numancia"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "sanse"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "talavera"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "conquense",
+        "visitante": "atletico_c"
+      }
+    ],
+    "22": [
+      {
+        "local": "albacete_b",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "conquense"
+      },
+      {
+        "local": "numancia",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "sanse",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "talavera",
+        "visitante": "calvo_sotelo"
+      }
+    ],
+    "23": [
+      {
+        "local": "real_madrid_c",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "sanse"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "talavera"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "conquense",
+        "visitante": "numancia"
+      }
+    ],
+    "24": [
+      {
+        "local": "albacete_b",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "conquense"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "numancia",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "sanse",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "talavera",
+        "visitante": "rsd_alcala"
+      }
+    ],
+    "25": [
+      {
+        "local": "real_avila",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "sanse"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "numancia"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "talavera",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "conquense",
+        "visitante": "valladolid_b"
+      }
+    ],
+    "26": [
+      {
+        "local": "albacete_b",
+        "visitante": "sanse"
+      },
+      {
+        "local": "real_madrid_c",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "atletico_c",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "talavera"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "numancia",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "conquense"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "tordesillas"
+      }
+    ],
+    "27": [
+      {
+        "local": "real_avila",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "sanse",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "talavera",
+        "visitante": "numancia"
+      },
+      {
+        "local": "conquense",
+        "visitante": "calvo_sotelo"
+      }
+    ],
+    "28": [
+      {
+        "local": "albacete_b",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "real_madrid_c",
+        "visitante": "talavera"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "numancia",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "sanse",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "conquense",
+        "visitante": "navalcarnero"
+      }
+    ],
+    "29": [
+      {
+        "local": "atletico_c",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "sanse"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "numancia"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "talavera",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "conquense"
+      }
+    ],
+    "30": [
+      {
+        "local": "albacete_b",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "real_madrid_c",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "sanse"
+      },
+      {
+        "local": "numancia",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "conquense",
+        "visitante": "talavera"
+      }
+    ],
+    "31": [
+      {
+        "local": "atletico_c",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "numancia",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "conquense"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "sanse",
+        "visitante": "talavera"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "albacete_b"
+      }
+    ],
+    "32": [
+      {
+        "local": "albacete_b",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "real_madrid_c",
+        "visitante": "sanse"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "numancia"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "talavera",
+        "visitante": "segoviana"
+      },
+      {
+        "local": "conquense",
+        "visitante": "real_avila"
+      }
+    ],
+    "33": [
+      {
+        "local": "atletico_c",
+        "visitante": "albacete_b"
+      },
+      {
+        "local": "real_avila",
+        "visitante": "rsd_alcala"
+      },
+      {
+        "local": "navalcarnero",
+        "visitante": "real_madrid_c"
+      },
+      {
+        "local": "numancia",
+        "visitante": "at_paso"
+      },
+      {
+        "local": "calvo_sotelo",
+        "visitante": "valladolid_b"
+      },
+      {
+        "local": "salamanca",
+        "visitante": "guadalajara"
+      },
+      {
+        "local": "segoviana",
+        "visitante": "getafe_b"
+      },
+      {
+        "local": "sanse",
+        "visitante": "conquense"
+      },
+      {
+        "local": "tordesillas",
+        "visitante": "talavera"
+      }
+    ],
+    "34": [
+      {
+        "local": "albacete_b",
+        "visitante": "numancia"
+      },
+      {
+        "local": "real_madrid_c",
+        "visitante": "atletico_c"
+      },
+      {
+        "local": "at_paso",
+        "visitante": "navalcarnero"
+      },
+      {
+        "local": "getafe_b",
+        "visitante": "salamanca"
+      },
+      {
+        "local": "guadalajara",
+        "visitante": "tordesillas"
+      },
+      {
+        "local": "rsd_alcala",
+        "visitante": "calvo_sotelo"
+      },
+      {
+        "local": "valladolid_b",
+        "visitante": "sanse"
+      },
+      {
+        "local": "talavera",
+        "visitante": "real_avila"
+      },
+      {
+        "local": "conquense",
+        "visitante": "segoviana"
+      }
+    ]
+  }
+}
