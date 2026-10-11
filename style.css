@@ -143,7 +143,7 @@ h2 {
   color: #ffffff;
 }
 
-/* Disposición Principal (Escritorio por defecto: Fila horizontal) */
+/* Disposición Principal */
 .main-content {
   display: flex;
   gap: 25px;
@@ -158,16 +158,21 @@ h2 {
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
+/* Fila de Partido (Escritorio por defecto) */
 .partido-fila {
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #121218;
-  padding: 8px 14px; /* Reducido de 12px 18px a 8px 14px */
-  margin-bottom: 8px;  /* Reducido de 10px a 8px */
+  padding: 10px 16px;
+  margin-bottom: 8px;
   border-radius: 10px;
   border-left: 4px solid #694ba2;
-  gap: 12px;
+  gap: 15px;
+}
+
+.match-teams-top {
+  display: contents; /* En PC funde los equipos para mantener la fila horizontal de 3 bloques */
 }
 
 .equipo-box {
@@ -197,8 +202,8 @@ h2 {
 }
 
 .equipo-box img {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -217,7 +222,7 @@ h2 {
 }
 
 .goles-input {
-  width: 44px;
+  width: 42px;
   height: 40px;
   text-align: center;
   font-size: 18px;
@@ -259,18 +264,19 @@ canvas {
 .botones-imagen {
   display: flex;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .botones-imagen button {
   flex: 1;
-  margin-top: 15px;
+  margin-top: 0;
 }
 
 .btn-primario, .btn-descargar, .btn-compartir {
   padding: 14px;
   border: none;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -286,32 +292,55 @@ canvas {
   .main-content { display: block; }
   .columna-preview { display: none; }
 
+  /* Botones de imagen apilados verticalmente para que no se deformen */
+  .botones-imagen {
+    flex-direction: column;
+  }
+
   .partido-fila {
     flex-direction: column;
     align-items: stretch;
-    padding: 15px;
-    gap: 14px;
+    padding: 14px;
+    gap: 12px;
     background: #181824;
     border: 1px solid #2d2d46;
     border-left: 5px solid #694ba2;
   }
 
-  .equipo-box.local, .equipo-box.vis {
+  /* Fila superior con los dos equipos de lado a lado sin recortes */
+  .match-teams-top {
+    display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    text-align: left;
-    width: 100%;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 10px;
+  }
+
+  .equipo-box.local {
+    justify-content: flex-start;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .equipo-box.vis {
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    text-align: right;
+    flex: 1;
+    min-width: 0;
   }
 
   .equipo-nombre {
-    white-space: normal;
-    font-size: 14px;
+    white-space: normal !important; /* Muestra el nombre completo sin truncar */
+    font-size: 13px;
+    line-height: 1.2;
+    overflow: visible;
   }
 
+  /* Fila inferior con marcadores y suspensión distribuidos */
   .match-center {
     justify-content: space-between;
     width: 100%;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 10px;
   }
 }

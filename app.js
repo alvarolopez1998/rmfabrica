@@ -133,12 +133,13 @@ window.cambiarLiga = function() {
 
   const cfg = CONFIG[ligaActual];
   const inputJornada = document.getElementById('input-jornada');
-  actualizarDisplayJornada()
   
   if (inputJornada) {
     inputJornada.max = cfg.maxJornadas;
     inputJornada.value = obtenerPrimeraJornadaPendiente();
   }
+
+  actualizarDisplayJornada(); // Sincroniza el número correcto de jornada en el selector táctil
 
   const listaInicial = todosLosEquipos[ligaActual] || [];
   
@@ -198,9 +199,15 @@ function renderizarFormularioPartidos(partidos) {
     const div = document.createElement('div');
     div.className = 'partido-fila';
     div.innerHTML = `
-      <div class="equipo-box local">
-        <img src="assets/escudos/${p.local.id}.png" onerror="this.style.opacity='0'">
-        <span class="equipo-nombre">${p.local.nombre}</span>
+      <div class="match-teams-top">
+        <div class="equipo-box local">
+          <img src="assets/escudos/${p.local.id}.png" onerror="this.style.opacity='0'">
+          <span class="equipo-nombre">${p.local.nombre}</span>
+        </div>
+        <div class="equipo-box vis">
+          <span class="equipo-nombre">${p.visitante.nombre}</span>
+          <img src="assets/escudos/${p.visitante.id}.png" onerror="this.style.opacity='0'">
+        </div>
       </div>
       
       <div class="match-center">
@@ -213,11 +220,6 @@ function renderizarFormularioPartidos(partidos) {
           <input type="checkbox" class="suspendido-checkbox" data-index="${index}" ${esSuspendido} onchange="actualizarClasificacionLocal()">
           <span>Susp.</span>
         </label>
-      </div>
-
-      <div class="equipo-box vis">
-        <span class="equipo-nombre">${p.visitante.nombre}</span>
-        <img src="assets/escudos/${p.visitante.id}.png" onerror="this.style.opacity='0'">
       </div>
     `;
     contenedor.appendChild(div);
