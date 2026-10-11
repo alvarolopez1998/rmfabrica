@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Generador de Clasificaciones Cantera RM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>Generador de Clasificaciones - Cantera Real Madrid</h1>
+    
+    <div class="panel-seleccion">
+      <label for="select-liga">Competición / Equipo:</label>
+      <select id="select-liga" onchange="cambiarLiga()">
+        <option value="castilla">Real Madrid Castilla (1ª RFEF)</option>
+        <option value="rmc">Real Madrid C (2ª RFEF)</option>
+        <option value="juvenilA">Juvenil A (División de Honor)</option>
+        <option value="uyl">Juvenil A (UEFA Youth League)</option>
+      </select>
+
+      <label for="input-jornada">Jornada:</label>
+      <input type="number" id="input-jornada" value="1" min="1" max="38" onchange="renderizarCanvas()">
+
+      <div style="margin-left: auto; display: flex; gap: 10px;">
+        <button class="btn-primario" style="margin-top:0; padding: 10px 14px; font-size: 14px;" onclick="exportarFicheroResultados()">💾 Exportar Fichero</button>
+        <label class="btn-primario" style="margin-top:0; padding: 10px 14px; font-size: 14px; background: #2196f3; cursor: pointer; display: inline-flex; align-items: center; border-radius: 8px;">
+          📂 Cargar Fichero <input type="file" id="input-archivo-resultados" accept=".json" style="display:none" onchange="importarFicheroResultados(event)">
+        </label>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="columna-partidos">
+        <h2>Resultados de la Jornada</h2>
+        <div id="partidos-lista">
+          <!-- Se cargan dinámicamente -->
+        </div>
+        <button class="btn-primario" onclick="actualizarClasificacion()">⚡ Actualizar Clasificación</button>
+      </div>
+
+      <div class="columna-preview">
+        <h2>Vista Previa</h2>
+        <canvas id="canvas-tabla" width="800" height="1000"></canvas>
+        <button class="btn-descargar" onclick="descargarImagen()">📥 Descargar Imagen PNG</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

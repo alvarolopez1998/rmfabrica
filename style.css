@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Alfa Slab One';
+  src: url('assets/fonts/AlfaSlabOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Now';
+  src: url('assets/fonts/Now-Bold.otf');
+  font-weight: bold;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121218;
+  color: #ffffff;
+  margin: 0;
+  padding: 20px;
+}
+
+.app-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #a29bfe;
+  font-size: 26px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-size: 18px;
+  color: #e0e0e0;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #694ba2;
+  padding-bottom: 8px;
+}
+
+/* Panel Superior de Selección */
+.panel-seleccion {
+  background: #1e1e2d;
+  padding: 18px 24px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.panel-seleccion label {
+  font-weight: bold;
+  font-size: 15px;
+  color: #a29bfe;
+}
+
+.panel-seleccion select, 
+.panel-seleccion input {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #3d3d5c;
+  background: #121218;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+}
+
+.panel-seleccion select:focus, 
+.panel-seleccion input:focus {
+  border-color: #694ba2;
+}
+
+/* Disposición Principal en 2 Columnas */
+.main-content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+/* Columna de Partidos (Izquierda) */
+.columna-partidos {
+  flex: 1;
+  background: #1e1e2d;
+  padding: 22px;
+  border-radius: 10px;
+  max-height: 880px;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.partido-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #121218;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border-left: 4px solid #694ba2;
+  transition: transform 0.1s ease;
+}
+
+.partido-fila:hover {
+  transform: translateX(3px);
+}
+
+.equipo-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 40%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.equipo-box img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.goles-input {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 1px solid #3d3d5c;
+  background: #1e1e2d;
+  color: #fff;
+}
+
+.goles-input:focus {
+  border-color: #21d07a;
+  background: #121218;
+}
+
+/* Columna de Vista Previa Canvas (Derecha) */
+.columna-preview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1e1e2d;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+canvas {
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  max-width: 100%;
+  height: auto;
+  background-color: #694ba2;
+}
+
+/* Botones de Acción */
+.btn-primario, .btn-descargar {
+  width: 100%;
+  padding: 14px;
+  margin-top: 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-primario {
+  background: #694ba2;
+  color: white;
+}
+
+.btn-primario:hover {
+  background: #563d87;
+  box-shadow: 0 4px 12px rgba(105, 75, 162, 0.4);
+}
+
+.btn-descargar {
+  background: #21d07a;
+  color: #000;
+}
+
+.btn-descargar:hover {
+  background: #1cb56a;
+  box-shadow: 0 4px 12px rgba(33, 208, 122, 0.4);
+}
+
+/* Responsive Móvil (iPhone 15 Pro) */
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+  }
+  
+  .columna-partidos, .columna-preview {
+    width: 100%;
+  }
+  
+  .panel-seleccion {
+    flex-wrap: wrap;
+  }
+}
